@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".Fragment.AddBookFragment">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/color_background">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <include layout="@layout/toolbar"/>
+
+
+            <TextView
+                android:text="@string/tv_book_name"
+                style="@style/tvAddBook" />
+
+            <EditText
+                android:id="@+id/etBookName"
+                android:hint="@string/et_book_name"
+                style="@style/etAddBook"
+                android:focusable="true"
+                android:autofillHints="@string/the_secret" />
+
+            <TextView
+                android:text="@string/tv_author_name"
+                style="@style/tvAddBook"
+                />
+
+            <EditText
+                android:id="@+id/etAuthorName"
+                android:hint="@string/et_author_name"
+                style="@style/etAddBook"
+                android:autofillHints="@string/rhonda_byrne" />
+
+            <TextView
+                android:text="@string/tv_select_type"
+                style="@style/tvAddBook"
+                />
+            <RadioGroup
+                style="@style/radioGroupAddActivity">
+                <RadioButton
+                    android:id="@+id/rbFiction"
+                    android:text="@string/rb_fiction"
+                    style="@style/radioBtnAddBook" />
+                <RadioButton
+                    android:id="@+id/rbNonFiction"
+                    android:text="@string/rb_non_fiction"
+                    style="@style/radioBtnAddBook"/>
+            </RadioGroup>
+            <TextView
+                android:text="@string/tv_select_genre"
+                style="@style/tvAddBook"
+                />
+            <Spinner
+                android:id="@+id/spinnerGenre"
+                style="@style/spinnerAddBook" />
+
+
+            <TextView
+                android:text="@string/tv_launch_date"
+                style="@style/tvAddBook"/>
+            <LinearLayout
+                android:id="@+id/linearLayoutLaunchDate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                style="@style/etAddBook">
+                <TextView
+                    android:layout_height="wrap_content"
+                    android:layout_width="@dimen/dimen0dp"
+                    android:id="@+id/tvLaunchDate"
+                    android:layout_weight="2"
+                    android:text="@string/et_launch_date"
+                    android:paddingTop="@dimen/paddingAddBook"
+                    android:textSize="@dimen/textSizeRadioButton"
+                    android:textColor="@color/color_primary"
+                    />
+
+                <ImageView
+                    android:id="@+id/imgEditDate"
+                    android:layout_width="@dimen/dimen0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.2"
+                    android:visibility="gone"
+                    android:adjustViewBounds="true"
+                    android:gravity="fill_vertical|end"
+                    app:srcCompat="@android:drawable/ic_menu_edit"
+                    android:contentDescription="@string/edit"/>
+            </LinearLayout>
+            <TextView
+                android:text="@string/tv_select_ageGroup"
+                style="@style/tvAddBook"
+                />
+            <LinearLayout style="@style/linearLayoutCheckBox">
+                <CheckBox
+                    android:id="@+id/cbBelow12"
+                    android:text="@string/cb_below_12"
+                    style="@style/checkBoxAddBook" />
+                <CheckBox
+                    android:id="@+id/cbAbove12"
+                    android:text="@string/cb_above_12"
+                    style="@style/checkBoxAddBook"/>
+            </LinearLayout>
+            <LinearLayout style="@style/linearLayoutCheckBox">
+                <CheckBox
+                    android:id="@+id/cbAbove18"
+                    android:text="@string/cb_above_18"
+                    style="@style/checkBoxAddBook"/>
+                <CheckBox
+                    android:id="@+id/cbAny"
+                    android:text="@string/cb_any"
+                    style="@style/checkBoxAddBook"/>
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/saveButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="40dp"
+                android:padding="10dp"
+                android:background="@drawable/button_background"
+                android:text="@string/add_book"
+                android:textColor="@color/color_background"
+                />
+            <TextView
+                android:id="@+id/tvId"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="gone"/>
+
+        </LinearLayout>
+    </ScrollView>
+
+</FrameLayout>

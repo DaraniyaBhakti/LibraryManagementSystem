@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:id="@+id/linearLayoutBookList"
+    android:padding="@dimen/paddingList"
+    android:layout_margin="@dimen/marginList"
+    >
+
+
+    <TextView
+        android:id="@+id/tvBookName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/tv_book_name"
+        android:textColor="@color/color_primary_dark"
+        android:textSize="@dimen/textSizeListBook"/>
+
+    <TextView
+        android:id="@+id/tvAuthorName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/tv_author_name"
+        android:textColor="@color/color_primary"
+        android:textSize="@dimen/textSizeListAuthor" />
+</LinearLayout>
+
+

@@ -1,0 +1,88 @@
+<resources>
+    <string name="app_name">TatvasoftAssignment4</string>
+    <string name="drawer_open">Open</string>
+    <string name="drawer_close">Close</string>
+    <string name="et_book_name">Enter book name</string>
+    <string name="et_author_name">Enter author name</string>
+    <string name="et_launch_date">Select launch date</string>
+    <string name="tv_book_name">Book</string>
+    <string name="tv_author_name">Author</string>
+    <string name="tv_launch_date">Launch date</string>
+    <string name="tv_select_type">Type</string>
+    <string name="tv_select_genre">Genre</string>
+    <string name="tv_select_ageGroup">Age group</string>
+    <string name="spinner_title">Genre</string>
+    <string name="cb_below_12">Below 12</string>
+    <string name="cb_above_12">Above 12</string>
+    <string name="cb_above_18">Above 18</string>
+    <string name="cb_any">Any</string>
+    <string name="rb_non_fiction">Non-fiction</string>
+    <string name="rb_fiction">Fiction</string>
+    <string name="add_book">Add Book</string>
+    <string name="edit_details">Edit Detail</string>
+    <string name="book_details">Book Detail</string>
+    <string name="search_book_hint">Search Book</string>
+    <string name="colon">:</string>
+    <string name="edit">Edit</string>
+    <string name="sort_by_bookName">Sort by BookName</string>
+    <string name="sort_by_date">Sort by Date</string>
+    <string name="filter_by_bookType">Filter By BookType</string>
+    <string name="filter_by_author">Filter By Author</string>
+    <string name="book_management_system">Book management system</string>
+    <string name="book">Book</string>
+    <string name="book_list">Book List</string>
+    <string name="selectAuthor">Select Author</string>
+    <string name="selectGenre">Select Book Genre</string>
+    <string name="SelectType">Select Book Type</string>
+    <string name="filter_by_bookGenre">Filter By BookGenre</string>
+    <string name="err_bookName">Enter book name</string>
+    <string name="err_authorName">Enter author name</string>
+    <string name="err_bookType">Select Book Type</string>
+    <string name="err_ageGroup">Select atleast 1 age group.</string>
+    <string name="toast_no_data_found">No Data Found</string>
+    <string name="dialog_filter">Filter</string>
+    <string name="dialog_clear">Clear</string>
+    <string name="tag_bookName">BookName</string>
+    <string name="tag_authorName">AuthorName</string>
+    <string name="tag_bookType">BookType</string>
+    <string name="tag_bookGenre">BookGenre</string>
+    <string name="tag_launchDate">LaunchDate</string>
+    <string name="tag_ageGroup">AgeGroup</string>
+    <string name="tag_bookId">BookId</string>
+    <string name="the_secret">The Secret</string>
+    <string name="rhonda_byrne">Rhonda Byrne</string>
+    <string name="no_book">No book!</string>
+    <string name="toast_bookAdded">Added Book</string>
+    <string name="toast_updateBook">Updated Book</string>
+
+    <string-array name="genre_array">
+        <item>Action and adventure</item>
+        <item>Alternate history</item>
+        <item>Anthology</item>
+        <item>Chick lit</item>
+        <item>Children</item>
+        <item>Classic</item>
+        <item>Comic book</item>
+        <item>Coming-of-age</item>
+        <item>Crime</item>
+        <item>Drama</item>
+        <item>Fairytale</item>
+        <item>Fantasy</item>
+        <item>Graphic novel</item>
+        <item>Historical fiction</item>
+        <item>Horror</item>
+        <item>Mystery</item>
+        <item>Paranormal romance</item>
+        <item>Picture book</item>
+        <item>Poetry</item>
+        <item>Political thriller</item>
+        <item>Romance</item>
+        <item>Satire</item>
+        <item>Science fiction</item>
+        <item>Short story</item>
+        <item>Suspense</item>
+        <item>Thriller</item>
+        <item>Western</item>
+        <item>Young adult</item>
+    </string-array>
+</resources>

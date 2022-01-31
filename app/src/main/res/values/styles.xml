@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+
+    <style name="tvAddBook">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/color_primary</item>
+        <item name="android:textSize">@dimen/textSizeTextViewAddActivity</item>
+        <item name="android:paddingStart">@dimen/paddingAddBook</item>
+        <item name="android:paddingEnd">@dimen/paddingAddBook</item>
+        <item name="android:layout_marginStart">@dimen/marginAddBook</item>
+        <item name="android:layout_marginEnd">@dimen/marginAddBook</item>
+        <item name="android:layout_marginTop">@dimen/marginAddBook</item>
+        <item name="android:fontFamily">sans-serif-black</item>
+    </style>
+
+    <style name="etAddBook">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginStart">@dimen/marginAddBook</item>
+        <item name="android:layout_marginEnd">@dimen/marginAddBook</item>
+        <item name="android:paddingStart">@dimen/paddingAddBook</item>
+        <item name="android:paddingEnd">@dimen/paddingAddBook</item>
+        <item name="android:fontFamily">sans-serif</item>
+        <item name="android:textSize">@dimen/textSizeEditTextAddActivity</item>
+        <item name="android:inputType">textCapSentences</item>
+        <item name="android:textColor">@color/color_primary</item>
+    </style>
+
+    <style name="radioGroupAddActivity">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:orientation">horizontal</item>
+        <item name="android:layout_marginEnd">@dimen/marginAddBook</item>
+        <item name="android:layout_marginStart">@dimen/marginAddBook</item>
+        <item name="android:padding">@dimen/paddingTopAddActivity</item>
+        <item name="android:paddingStart">@dimen/paddingAddBook10dp</item>
+        <item name="android:paddingEnd">@dimen/paddingAddBook10dp</item>
+    </style>
+    <style name="radioBtnAddBook">
+        <item name="android:layout_width">@dimen/dimen0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:textSize">@dimen/textSizeRadioButton</item>
+        <item name="android:textColor">@color/color_primary</item>
+    </style>
+    <style name="spinnerAddBook">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:prompt">@string/spinner_title</item>
+        <item name="android:padding">@dimen/paddingSpinnerAddActivity</item>
+        <item name="android:layout_margin">@dimen/marginSpinnerAddActivity</item>
+        <item name="android:spinnerMode">dropdown</item>
+    </style>
+    <style name="linearLayoutCheckBox">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:orientation">horizontal</item>
+        <item name="android:layout_marginEnd">@dimen/marginAddBook</item>
+        <item name="android:layout_marginStart">@dimen/marginAddBook</item>
+        <item name="android:paddingTop">@dimen/paddingTopAddActivity</item>
+        <item name="android:paddingStart">@dimen/paddingAddBook10dp</item>
+        <item name="android:paddingEnd">@dimen/paddingAddBook10dp</item>
+    </style>
+
+    <style name="checkBoxAddBook">
+        <item name="android:layout_width">@dimen/dimen0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:textSize">@dimen/textSizeRadioButton</item>
+        <item name="android:textColor">@color/color_primary</item>
+    </style>
+
+    <style name="tvHeadingDetail">
+        <item name="android:layout_width">@dimen/dimen0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_weight">0.6</item>
+        <item name="android:textSize">@dimen/textSizeRadioButton</item>
+        <item name="android:textColor">@color/color_primary</item>
+    </style>
+
+    <style name="tvDataDetails">
+        <item name="android:layout_width">@dimen/dimen0dp</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">@dimen/textSizeRadioButton</item>
+        <item name="android:textColor">@color/color_primary</item>
+    </style>
+
+    <style name="tvColonStyle">
+        <item name="android:layout_width">@dimen/dimen0dp</item>
+        <item name="android:layout_weight">0.1</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">@dimen/textSizeRadioButton</item>
+        <item name="android:textColor">@color/color_primary</item>
+
+    </style>
+
+    <style name="linearLayoutDetail">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:orientation">horizontal</item>
+        <item name="android:layout_marginStart">@dimen/marginAddBook</item>
+        <item name="android:layout_marginEnd">@dimen/marginAddBook</item>
+        <item name="android:layout_marginTop">@dimen/paddingTopAddActivity</item>
+        <item name="android:padding">@dimen/paddingAddBook10dp</item>
+    </style>
+    <style name="PopupMenuStyle" parent="Theme.AppCompat.Light">
+        <item name="android:background">@android:color/white</item>
+    </style>
+</resources>

@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Fragment.BookDetailFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@color/color_background">
+        <include layout="@layout/toolbar"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/button_background"
+        android:layout_margin="@dimen/paddingTopAddActivity">
+
+        <TextView
+            android:id="@+id/tvDetailBookName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="@dimen/marginAddBook"
+            android:padding="@dimen/paddingAddBook10dp"
+            android:text="@string/tv_book_name"
+            android:textColor="@color/white"
+            android:textSize="@dimen/textSizeListBook" />
+    </LinearLayout>
+
+    <LinearLayout style="@style/linearLayoutDetail">
+        <TextView
+            android:text="@string/tv_author_name"
+            style="@style/tvHeadingDetail" />
+        <TextView
+            android:text="@string/colon"
+            style="@style/tvColonStyle" />
+        <TextView
+            android:id="@+id/tvDetailAuthorName"
+            android:text="@string/tv_author_name"
+            style="@style/tvDataDetails" />
+    </LinearLayout>
+
+    <LinearLayout style="@style/linearLayoutDetail">
+        <TextView
+            android:text="@string/tv_select_type"
+            style="@style/tvHeadingDetail" />
+        <TextView
+            android:text="@string/colon"
+            style="@style/tvColonStyle" />
+        <TextView
+            android:id="@+id/tvDetailBookType"
+            android:text="@string/tv_select_type"
+            style="@style/tvDataDetails" />
+    </LinearLayout>
+
+    <LinearLayout style="@style/linearLayoutDetail">
+        <TextView
+            android:text="@string/tv_select_genre"
+            style="@style/tvHeadingDetail" />
+        <TextView
+            android:text="@string/colon"
+            style="@style/tvColonStyle" />
+        <TextView
+            android:id="@+id/tvDetailBookGenre"
+            android:text="@string/tv_select_genre"
+            style="@style/tvDataDetails" />
+    </LinearLayout>
+
+    <LinearLayout style="@style/linearLayoutDetail">
+        <TextView
+            android:text="@string/tv_launch_date"
+            style="@style/tvHeadingDetail" />
+        <TextView
+            android:text="@string/colon"
+            style="@style/tvColonStyle" />
+        <TextView
+            android:id="@+id/tvDetailLaunchDate"
+            android:text="@string/tv_launch_date"
+            style="@style/tvDataDetails" />
+    </LinearLayout>
+
+    <LinearLayout style="@style/linearLayoutDetail">
+        <TextView
+            android:text="@string/tv_select_ageGroup"
+            style="@style/tvHeadingDetail" />
+        <TextView
+            android:text="@string/colon"
+            style="@style/tvColonStyle" />
+        <TextView
+            android:id="@+id/tvDetailAgeGroup"
+            android:text="@string/tv_select_ageGroup"
+            style="@style/tvDataDetails" />
+    </LinearLayout>
+    </LinearLayout>
+</FrameLayout>
