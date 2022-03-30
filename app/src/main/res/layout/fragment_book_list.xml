@@ -18,14 +18,30 @@
             android:layout_height="wrap_content"
             android:background="@color/color_primary"
             >
-            <android.widget.SearchView
-                android:id="@+id/searchView"
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_margin="@dimen/paddingAddBook"
-                android:background="@color/color_background"
-                android:iconifiedByDefault="false"
-                android:queryHint="@string/search_book_hint" />
+                android:layout_gravity="center_vertical"
+                android:layout_margin="@dimen/searchView_5dp"
+                android:padding="@dimen/searchView_5dp"
+                android:background="@drawable/edit_text_border"
+                android:orientation="horizontal">
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/searchView_5dp"
+                    android:src="@drawable/ic_baseline_search_24"
+                    android:contentDescription="@string/seacrh_icon" />
+                <EditText
+                    android:id="@+id/etBookSearch"
+                    android:layout_width="match_parent"
+                    android:layout_gravity="center_vertical"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/searchView_5dp"
+                    android:hint="@string/search_book_hint"
+                    android:textSize="@dimen/textSizeEditTextAddActivity"
+                    android:background="@null"/>
+            </LinearLayout>
 
         </LinearLayout>
 

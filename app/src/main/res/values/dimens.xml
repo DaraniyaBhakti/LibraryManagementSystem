@@ -14,12 +14,13 @@
     <dimen name="paddingList">12dp</dimen>
     <dimen name="marginList">15dp</dimen>
 
+    <dimen name="textSizeBook">30sp</dimen>
+    <dimen name="navigationHeaderPadding">20dp</dimen>
+    <dimen name="searchView_5dp">5dp</dimen>
+
     <dimen name="textSizeListBook">20sp</dimen>
     <dimen name="textSizeListAuthor">15sp</dimen>
-
     <dimen name="textSizeTextViewAddActivity">20sp</dimen>
     <dimen name="textSizeEditTextAddActivity">18sp</dimen>
     <dimen name="textSizeRadioButton">18sp</dimen>
-    <dimen name="textSizeBook">30sp</dimen>
-    <dimen name="navigationHeaderPadding">20dp</dimen>
 </resources>

@@ -2,14 +2,16 @@ package com.tatvasoft.tatvasoftassignment4.Fragment;
 
 import android.annotation.SuppressLint;
 import android.os.Bundle;
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.EditText;
 import android.widget.ListView;
-import android.widget.SearchView;
 import android.widget.SimpleAdapter;
 import android.widget.TextView;
 
@@ -34,7 +36,7 @@ public class BookListFragment extends Fragment{
     private ArrayList<HashMap<String,String>> bookArrayList;
     private BookDatabase bookDatabase;
     private ListView listView;
-    private SearchView searchView;
+    private EditText etBookSearch;
     private TextView tvNoBook;
     SimpleAdapter adapter;
     ArrayList<HashMap<String, String>> arrayType = new ArrayList<>();
@@ -58,11 +60,11 @@ public class BookListFragment extends Fragment{
         View view = inflater.inflate(R.layout.fragment_book_list, container, false);
 
         androidx.appcompat.widget.Toolbar toolbar= view.findViewById(R.id.toolbar);
-        ((AppCompatActivity)getActivity()).setSupportActionBar(toolbar);
-        ((AppCompatActivity)getActivity()).getSupportActionBar().setTitle(getString(R.string.book_list));
+        ((AppCompatActivity) Objects.requireNonNull(requireActivity())).setSupportActionBar(toolbar);
+        Objects.requireNonNull(((AppCompatActivity) requireActivity()).getSupportActionBar()).setTitle(getString(R.string.book_list));
 
         setHasOptionsMenu(true);
-        searchView = view.findViewById(R.id.searchView);
+        etBookSearch = view.findViewById(R.id.etBookSearch);
         listView = view.findViewById(R.id.listView);
         tvNoBook = view.findViewById(R.id.tvNoBook);
         bookArrayList = new ArrayList<>();
@@ -79,45 +81,38 @@ public class BookListFragment extends Fragment{
 
     private void setSearchView()
     {
-        searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
-            @Override
-            public boolean onQueryTextSubmit(String query) {
-                if(query.isEmpty())
-                {
-                    listClickEvent();
-                }
-                return false;
-
-            }
-            @Override
-            public boolean onQueryTextChange(String s) {
-                filter(s);
-                return false;
-            }
-        });
-    }
-
-
-
-    private void filter(String text)
-    {
         ArrayList<HashMap<String,String>> filteredList = new ArrayList<>();
-        if(text.length()>0) {
-            for (HashMap<String, String> item : finalBookList) {
-                if (item.get(Constant.BOOK_NAME).toLowerCase().contains(text.toLowerCase())) {
-                    filteredList.add(item);
-                }
-                else {
-                    finalBookList=filteredList;
-                    listClickEvent();
-                }
+        etBookSearch.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
             }
-            if(!filteredList.isEmpty()) {
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+
+                filteredList.clear();
+                if(s.toString().length() > 0){
+                    for(int i =0 ; i <bookArrayList.size() ; i++){
+                        if(Objects.requireNonNull(bookArrayList.get(i).get(Constant.BOOK_NAME)).toLowerCase().contains(s.toString().toLowerCase())){
+                            filteredList.add(bookArrayList.get(i));
+                        }
+                    }
+                }
+                if(filteredList.size() == 0 && s.toString().length() == 0){
+                    filteredList.addAll(bookArrayList);
+                }
                 finalBookList = filteredList;
                 listClickEvent();
             }
-        }
-        else if(text.equals("")){
+
+
+            @Override
+            public void afterTextChanged(Editable s) {
+
+            }
+        });
+        if(etBookSearch.getText().toString().equals("")){
             finalBookList=bookArrayList;
             listClickEvent();
         }

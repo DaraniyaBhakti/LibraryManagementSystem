@@ -35,6 +35,7 @@ import java.util.Calendar;
 import java.util.Date;
 import java.util.HashMap;
 import java.util.Locale;
+import java.util.Objects;
 
 public class AddBookFragment extends Fragment implements AdapterView.OnItemSelectedListener{
     private EditText etBookName, etAuthorName;
@@ -66,8 +67,8 @@ public class AddBookFragment extends Fragment implements AdapterView.OnItemSelec
         View view = inflater.inflate(R.layout.fragment_add_book, container, false);
 
         androidx.appcompat.widget.Toolbar toolbar= view.findViewById(R.id.toolbar);
-        ((AppCompatActivity)getActivity()).setSupportActionBar(toolbar);
-        ((AppCompatActivity)getActivity()).getSupportActionBar().setTitle(getString(R.string.add_book));
+        ((AppCompatActivity) Objects.requireNonNull(requireActivity())).setSupportActionBar(toolbar);
+        Objects.requireNonNull(((AppCompatActivity) requireActivity()).getSupportActionBar()).setTitle(getString(R.string.add_book));
 
         resources = getResources();
 
@@ -76,6 +77,7 @@ public class AddBookFragment extends Fragment implements AdapterView.OnItemSelec
         clickToSetDate();
         setSpinner();
 
+        assert getArguments() != null;
         if(!getArguments().getBoolean(Constant.ADD_ACTIVITY))
         {
             getBookData();
@@ -204,6 +206,8 @@ public class AddBookFragment extends Fragment implements AdapterView.OnItemSelec
                     );
 
                     Toast.makeText(getContext(),getString( R.string.toast_bookAdded),Toast.LENGTH_SHORT).show();
+
+
                     BookListFragment bookListFragment = new BookListFragment();
                     requireActivity().getSupportFragmentManager().beginTransaction()
                         .replace(R.id.container,bookListFragment).commit();
@@ -218,9 +222,13 @@ public class AddBookFragment extends Fragment implements AdapterView.OnItemSelec
                             tvLaunchDate.getText().toString(),
                             getAgeGroup());
                     Toast.makeText(getContext(), getString(R.string.toast_updateBook),Toast.LENGTH_SHORT).show();
-                    BookListFragment bookListFragment = new BookListFragment();
-                    requireActivity().getSupportFragmentManager().beginTransaction()
-                            .replace(R.id.container,bookListFragment).commit();
+
+                    BookDetailFragment bookDetailFragment = new BookDetailFragment();
+                    Bundle bundle = new Bundle();
+                    bundle.putInt("BookId", updateBookId);
+                    bookDetailFragment.setArguments(bundle);
+                    requireActivity().getSupportFragmentManager().beginTransaction().replace(R.id.container,bookDetailFragment)
+                            .addToBackStack(null).commit();
                }
             }
         });
@@ -255,6 +263,7 @@ public class AddBookFragment extends Fragment implements AdapterView.OnItemSelec
          Date date = new Date();
          try {
              date = simpleDateFormat.parse(tvLaunchDate.getText().toString());
+             assert date != null;
              Log.d("date",simpleDateFormat.format(date));
          } catch (ParseException e) {
              e.printStackTrace();
@@ -266,9 +275,9 @@ public class AddBookFragment extends Fragment implements AdapterView.OnItemSelec
 
          Calendar calendar = Calendar.getInstance();
          DatePickerDialog.OnDateSetListener dateSetListener = (datePicker, year, month, day) -> {
-             calendar.set(Calendar.YEAR,year);
-             calendar.set(Calendar.MONTH,month);
-             calendar.set(Calendar.DAY_OF_MONTH,day);
+             calendar.set(Calendar.YEAR, year);
+             calendar.set(Calendar.MONTH, month);
+             calendar.set(Calendar.DAY_OF_MONTH, day);
 
              String dateString = DateFormat.getDateInstance(DateFormat.SHORT, Locale.UK).format(calendar.getTime());
              tvLaunchDate.setText(dateString);

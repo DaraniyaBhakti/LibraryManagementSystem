@@ -54,6 +54,7 @@
     <string name="no_book">No book!</string>
     <string name="toast_bookAdded">Added Book</string>
     <string name="toast_updateBook">Updated Book</string>
+    <string name="seacrh_icon">Search View icon</string>
 
     <string-array name="genre_array">
         <item>Action and adventure</item>
